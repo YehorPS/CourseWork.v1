@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Military Personnel</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Military Personnel</h1>
+
+    <form id="militaryForm">
+        <input type="text" id="militaryName" placeholder="Name" required>
+        <input type="text" id="militaryRank" placeholder="Rank" required>
+        <input type="number" id="militarySalary" placeholder="Salary" required>
+        <input type="date" id="militaryDateEnlisted" placeholder="Date Enlisted" required>
+        <button type="submit">Add Military</button>
+    </form>
+
+    <table id="militaryTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Rank</th>
+                <th>Salary</th>
+                <th>Date Enlisted</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td><%= military.name %></td>
+                    <td><%= military.rank %></td>
+                    <td><%= military.salary %></td>
+                    <td><%= military.dateEnlisted.toDateString() %></td>
+                </tr>
+        </tbody>
+    </table>
+
+    <a href="/login">Back to Home</a>
+
+    <script src="app.js"></script>
+</body>
+</html>
